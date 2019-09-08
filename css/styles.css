@@ -1378,6 +1378,7 @@ body #about #intro .data #downloadCV:hover i {
 
 body #about #skillsAndExpertise {
   width: 100%;
+  margin-bottom: 40px;
   -webkit-box-shadow: none;
           box-shadow: none;
   display: -webkit-box;
@@ -1631,7 +1632,7 @@ body #about #skillsAndExpertise #skills .options .display .content .software i {
 
 body #about #skillsAndExpertise #skills .options .display .content h1 {
   color: #8DFFAA;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 body #about #skillsAndExpertise #skills .options .display.ui #uiContent {
