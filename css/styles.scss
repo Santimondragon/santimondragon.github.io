@@ -82,7 +82,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, $black, $darkGray);
-    overflow: none;
+    overflow: hidden;
 
     #guia {
         position: fixed;

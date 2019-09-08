@@ -84,7 +84,7 @@ body {
   height: 100vh;
   background: -webkit-gradient(linear, left top, right bottom, from(#0F0F0F), to(#232323));
   background: linear-gradient(to bottom right, #0F0F0F, #232323);
-  overflow: none;
+  overflow: hidden;
 }
 
 body #guia {
