@@ -6,10 +6,10 @@ $ligtherBlack: #1A1A1A;
 $blackOpacity: #1A1A1ABB;
 $blackOpacityMenu: #1E1E1EDD;
 $darkGray: #232323;
-$gray: #292929;
+$gray: #323232;
 $fontGray: rgb(75, 75, 75);
 $green: #8DFFAA;
-$lightGray: #E1E1E1;
+$lightGray: rgb(200, 200, 200);
 $white: rgb(250, 250, 250);
 $shadow: rgba(0, 0, 0, 0.7);
 
@@ -25,6 +25,21 @@ $shadow: rgba(0, 0, 0, 0.7);
     font-family: 'Fira Sans', sans-serif;
     list-style: none;
     scroll-behavior: smooth;
+    letter-spacing: 0.03em;
+
+    &::-webkit-scrollbar-track {
+        background-color: none;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:vertical {
+        background-color: $fontGray;
+        border-radius: 5px;
+    }
 
     &::selection {
         background: white;
@@ -67,7 +82,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom right, $black, $darkGray);
-    overflow: hidden;
+    overflow: none;
 
     #guia {
         position: fixed;
@@ -552,14 +567,16 @@ body {
     #about {
         width: 100%;
         height: 100%;
-        padding: 30px 30px 30px 100px;
+        padding: 60px 50px 50px 105px;
         background: $blackOpacity;
         position: relative;
+        overflow-y: auto;
+
 
         // Flex Attributes
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-content: center;
         align-items: center;
 
@@ -608,92 +625,81 @@ body {
             box-shadow: 0px 2px 10px -3px $shadow;
         }
 
-        #navBar {
-            width: 65px;
-            min-height: 70%;
-            background: $black;
+        #navAnchor {
             position: fixed;
-            align-self: flex-start;
+            align-self: baseline;
             left: 0;
+            top: 50%;
             z-index: 9;
-            border-radius: 0 5px 5px 0;
+            height: 0px;
 
             // Flex Attributes
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-content: center;
             align-items: center;
 
-            * {
-                user-select: none;
-            }
-
-            .logo {
-                width: 100%;
-                flex: 15%;
-                min-height: 50px;
-                padding-right: 5px;
-                padding-top: 5px;
+            #navBar {
+                width: 65px;
+                //min-height: 70%;
+                background: $black;
+                border-radius: 0 5px 5px 0;
 
                 // Flex Attributes
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-between;
                 align-content: center;
                 align-items: center;
 
-                img {
-                    height: 35px;
+                * {
+                    user-select: none;
                 }
 
-                &:hover {
-                    img {}
-                }
-            }
-
-            .menu {
-                width: 100%;
-                flex: 7%;
-
-                // Flex Attributes
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-content: center;
-                align-items: center;
-
-                li {
+                .logo {
                     width: 100%;
-                    height: 55px;
-                    position: relative;
+                    flex: 15%;
+                    min-height: 110px;
+                    padding-right: 5px;
+                    padding-top: 5px;
 
-                    a {
-                        height: 100%;
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 35px;
+                    }
+
+                    &:hover {
+                        img {}
+                    }
+                }
+
+                .menu {
+                    width: 100%;
+                    flex: 70%;
+                    padding: 15px 0;
+
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    li {
                         width: 100%;
+                        height: 55px;
+                        position: relative;
 
-                        // Flex Attributes
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-content: center;
-                        align-items: center;
-
-                        i {
-                            font-size: 20px;
-                            color: $green;
-                        }
-
-                        span {
-                            opacity: 0;
-                            position: absolute;
-                            right: 100px;
-                            padding: 10px 5px;
-                            min-width: 90px;
-                            border-radius: 5px;
-                            background: $darkGray;
-                            box-shadow: 0px 2px 10px -4px $shadow;
-                            z-index: -999;
+                        a {
+                            height: 100%;
+                            width: 100%;
 
                             // Flex Attributes
                             display: flex;
@@ -702,146 +708,170 @@ body {
                             align-content: center;
                             align-items: center;
 
-                        }
-
-                        &:hover {
                             i {
-                                opacity: 1;
-                                color: $white;
+                                font-size: 20px;
+                                color: $green;
                             }
 
                             span {
-                                opacity: 1;
-                                right: -100px;
-                                transition-delay: 0.3s;
+                                opacity: 0;
+                                position: absolute;
+                                right: 100px;
+                                padding: 10px 5px;
+                                min-width: 90px;
+                                border-radius: 5px;
+                                background: $darkGray;
+                                box-shadow: 0px 2px 10px -4px $shadow;
+                                z-index: -999;
 
-                                &::before {
-                                    content: " ";
-                                    width: 0;
-                                    height: 0;
-                                    position: absolute;
-                                    left: -10px;
-                                    border-top: 7px solid transparent;
-                                    border-bottom: 7px solid transparent;
+                                // Flex Attributes
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-content: center;
+                                align-items: center;
 
-                                    border-right: 10px solid $darkGray;
+                            }
+
+                            &:hover {
+                                i {
+                                    opacity: 1;
+                                    color: $white;
+                                }
+
+                                span {
+                                    opacity: 1;
+                                    right: -100px;
+                                    transition-delay: 0.3s;
+
+                                    &::before {
+                                        content: " ";
+                                        width: 0;
+                                        height: 0;
+                                        position: absolute;
+                                        left: -10px;
+                                        border-top: 7px solid transparent;
+                                        border-bottom: 7px solid transparent;
+
+                                        border-right: 10px solid $darkGray;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
 
-            .contSocial {
-                position: relative;
-                width: 100%;
-                flex: 15%;
-                min-height: 50px;
-                padding-bottom: 5px;
-                cursor: pointer;
-
-                // Flex Attributes
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                align-items: center;
-
-                i {
-                    font-size: 20px;
-                    color: $green;
-                }
-
-                .social {
-                    position: absolute;
-                    width: 80px;
-                    height: 80px;
-                    opacity: 0;
-                    position: absolute;
-                    right: 100px;
-                    border-radius: 5px;
-                    background: $darkGray;
-                    box-shadow: 0px 2px 10px -4px $shadow;
-                    z-index: -999;
+                .contSocial {
+                    position: relative;
+                    width: 100%;
+                    flex: 15%;
+                    min-height: 110px;
+                    padding-bottom: 5px;
+                    cursor: pointer;
 
                     // Flex Attributes
                     display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-evenly;
-                    align-content: space-evenly;
+                    justify-content: center;
+                    align-content: center;
                     align-items: center;
 
-                    li {
-                        width: 30px;
-                        height: 30px;
-                        background: $blackOpacityMenu;
+                    i {
+                        font-size: 20px;
+                        color: $green;
+                    }
+
+                    .social {
+                        position: absolute;
+                        width: 80px;
+                        height: 80px;
+                        opacity: 0;
+                        position: absolute;
+                        right: 100px;
+                        border-radius: 5px;
+                        background: $darkGray;
                         box-shadow: 0px 2px 10px -4px $shadow;
+                        z-index: -999;
+
                         // Flex Attributes
                         display: flex;
-                        flex-direction: row;
                         flex-wrap: wrap;
-                        justify-content: center;
-                        align-content: center;
+                        justify-content: space-evenly;
+                        align-content: space-evenly;
                         align-items: center;
 
-                        a {
-                            height: 30px;
+                        li {
                             width: 30px;
-
+                            height: 30px;
+                            background: $blackOpacityMenu;
+                            box-shadow: 0px 2px 10px -4px $shadow;
                             // Flex Attributes
                             display: flex;
                             flex-direction: row;
+                            flex-wrap: wrap;
                             justify-content: center;
                             align-content: center;
                             align-items: center;
 
-                            img {
-                                width: 19px;
-                                max-height: 16px;
-                                opacity: 0.3;
-                                filter: brightness(150%);
-                            }
+                            a {
+                                height: 30px;
+                                width: 30px;
 
-                            &:hover {
-                                background: $black;
+                                // Flex Attributes
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-content: center;
+                                align-items: center;
 
                                 img {
-                                    opacity: 1;
-                                    filter: brightness(100%);
+                                    width: 19px;
+                                    max-height: 16px;
+                                    opacity: 0.3;
+                                    filter: brightness(150%);
+                                }
+
+                                &:hover {
+                                    background: $black;
+
+                                    img {
+                                        opacity: 1;
+                                        filter: brightness(100%);
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                &:hover {
-                    i {
-                        color: $white;
-                    }
+                    &:hover {
+                        i {
+                            color: $white;
+                        }
 
-                    .social {
-                        opacity: 1;
-                        right: -90px;
-                        transition-delay: 0.3s;
+                        .social {
+                            opacity: 1;
+                            right: -90px;
+                            transition-delay: 0.3s;
 
-                        &::before {
-                            content: " ";
-                            width: 0;
-                            height: 0;
-                            position: absolute;
-                            left: -10px;
-                            border-top: 7px solid transparent;
-                            border-bottom: 7px solid transparent;
+                            &::before {
+                                content: " ";
+                                width: 0;
+                                height: 0;
+                                position: absolute;
+                                left: -10px;
+                                border-top: 7px solid transparent;
+                                border-bottom: 7px solid transparent;
 
-                            border-right: 10px solid $darkGray;
+                                border-right: 10px solid $darkGray;
+                            }
                         }
                     }
                 }
-            }
 
-            .separador {
-                width: 100%;
-                height: 2px;
-                background: $darkerBlack;
+                .separador {
+                    width: 100%;
+                    height: 2px;
+                    background: $darkerBlack;
+                }
             }
         }
 
@@ -851,21 +881,473 @@ body {
             left: 0;
         }
 
+        .title {
+            margin-bottom: 40px;
+
+            // Flex Attributes
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .decoration {
+                position: relative;
+                // Flex Attributes
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                .line {
+                    position: absolute;
+                    background: $green;
+                    opacity: 0.5;
+                    height: 1px;
+                    width: 60px;
+                }
+
+                .dot {
+                    position: absolute;
+                    ;
+                    background: $green;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 7px;
+                }
+            }
+        }
+
         #intro {
             width: 100%;
             background: $darkerBlack;
             border-radius: 5px;
             box-shadow: 0px 2px 10px -3px $shadow;
-            padding: 30px;
+            padding: 40px;
+            margin-bottom: 40px;
+
+            // Flex Attributes
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
 
             .profile {
+                flex: 0 1 auto;
                 height: 100%;
-                max-height: 300px;
+                max-height: 200px;
                 border-radius: 100%;
+                margin-right: 40px;
+            }
+
+            .information {
+                flex: 1 1 auto;
+                margin-right: 30px;
+
+                .location {
+                    margin: 6px 0;
+                    padding: 6px 0;
+                    width: fit-content;
+
+                    * {
+                        color: $green;
+                    }
+
+                    i {
+                        margin-right: 5px;
+                        font-size: 12px;
+                    }
+
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-content: center;
+                    align-items: center;
+                }
+
+                .description {
+                    line-height: 1.6em;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-align: justify;
+                }
+            }
+
+            .data {
+                flex: 0 1 auto;
+                min-width: 200px;
+
+                // Flex Attributes
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                align-items: flex-start;
+
+                a {
+                    margin-bottom: 12px;
+                    padding-right: 25px;
+
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-content: center;
+                    align-items: center;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    i {
+                        width: 35px;
+                        height: 35px;
+                        background: $darkGray;
+                        color: $green;
+                        margin-right: 10px;
+                        box-shadow: 0px 2px 10px -4px $shadow;
+
+                        // Flex Attributes
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-content: center;
+                        align-items: center;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        color: $green;
+                    }
+
+                    &:hover {
+                        * {
+                            color: $lightGray;
+                        }
+
+                        i {
+                            background: $black;
+                        }
+                    }
+                }
+
+                #downloadCV {
+                    position: relative;
+                    background: $blackOpacityMenu;
+                    box-shadow: 0px 2px 10px -4px $shadow;
+                    padding: 12px 15px;
+
+                    span {
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $green;
+                    }
+
+                    i {
+                        background: none;
+                        position: absolute;
+                        height: 0px;
+                        width: 0px;
+                        padding: 0;
+                        right: 15px;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        background: $black;
+                        padding-right: 50px;
+
+                        span {
+                            color: $lightGray;
+                        }
+
+                        i {
+                            color: $lightGray;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        #skillsAndExpertise {
+            width: 100%;
+            box-shadow: none;
+
+            // Flex Attributes
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+
+            .subtitle {
+                margin-bottom: 40px;
+
+                // Flex Attributes
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+                align-items: center;
+
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+
+                .decoration {
+                    position: relative;
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+
+                    .line {
+                        position: absolute;
+                        background: $lightGray;
+                        opacity: 0.5;
+                        height: 1px;
+                        width: 50px;
+                    }
+
+                    .dot {
+                        position: absolute;
+                        background: $lightGray;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 7px;
+                    }
+                }
+            }
+
+            #skills {
+                height: 100%;
+                flex: 50%;
+                background: $darkerBlack;
+                border-radius: 5px;
+                box-shadow: 0px 2px 10px -3px $shadow;
+                padding: 40px;
+                margin-right: 20px;
+
+                // Flex Attributes
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+                align-items: center;
+
+                .options {
+                    width: 100%;
+
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-content: center;
+                    align-items: center;
+
+                    .icons {
+                        flex: 0 1 auto;
+                        margin-right: 40px;
+                        // Flex Attributes
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-content: center;
+                        align-items: center;
+
+                        i {
+                            width: 45px;
+                            height: 45px;
+                            background: $darkGray;
+                            color: $fontGray;
+                            margin-bottom: 15px;
+                            box-shadow: 0px 2px 10px -4px $shadow;
+                            cursor: pointer;
+
+                            // Flex Attributes
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+
+                            &.active {
+                                color: $green;
+                            }
+
+                            &:hover {
+                                color: $green;
+                            }
+                        }
+                    }
+
+                    .display {
+                        flex: 1 1 auto;
+                        height: 100%;
+                        padding: 15px 10px;
+
+                        .content {
+                            height: 100%;
+                            animation-name: appear;
+                            animation-duration: 0.6s;
+                            animation-timing-function: ease-out;
+                            animation-fill-mode: forwards;
+
+                            // Flex Attributes
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-content: center;
+                            align-items: center;
+
+                            p {
+                                line-height: 1.6em;
+                                font-weight: 300;
+                                font-size: 13px;
+                                text-align: center;
+                                flex: 1 1 auto;
+
+                                // Flex Attributes
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-content: center;
+                                align-items: center;
+
+                            }
+
+                            .software {
+
+                                i {
+                                    font-size: 20px;
+                                    color: #707070;
+                                    padding: 0 5px;
+                                }
+                            }
+
+                            h1 {
+                                color: $green;
+                                font-size: 30px;
+                            }
+                        }
+
+                        &.ui {
+                            #uiContent {
+                                display: flex
+                            }
+
+                            #uxContent {
+                                display: none
+                            }
+
+                            #webContent {
+                                display: none
+                            }
+
+                            #researchContent {
+                                display: none
+                            }
+                        }
+
+                        &.ux {
+                            #uiContent {
+                                display: none
+                            }
+
+                            #uxContent {
+                                display: flex
+                            }
+
+                            #webContent {
+                                display: none
+                            }
+
+                            #researchContent {
+                                display: none
+                            }
+                        }
+
+                        &.web {
+                            #uiContent {
+                                display: none
+                            }
+
+                            #uxContent {
+                                display: none
+                            }
+
+                            #webContent {
+                                display: flex
+                            }
+
+                            #researchContent {
+                                display: none
+                            }
+                        }
+
+                        &.research {
+                            #uiContent {
+                                display: none
+                            }
+
+                            #uxContent {
+                                display: none
+                            }
+
+                            #webContent {
+                                display: none
+                            }
+
+                            #researchContent {
+                                display: flex
+                            }
+                        }
+                    }
+                }
+            }
+
+            #expertise {
+                flex: 50%;
+                background: $darkerBlack;
+                border-radius: 5px;
+                box-shadow: 0px 2px 10px -3px $shadow;
+                padding: 40px;
+                margin-left: 20px;
             }
         }
     }
+}
 
+@keyframes appear {
+    0% {
+        display: none;
+    }
+    1% {
+        display: flex;
+        opacity: 0;
+        margin-top: 50px;
+    }
+    100% {
+        display: flex;
+        opacity: 1;
+        margin: 0;
+    }
 }
 
 

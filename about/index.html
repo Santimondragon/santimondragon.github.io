@@ -16,66 +16,195 @@
 <body>
     <section id="about">
         <img id="guia" src="../images/pattern.png" alt="guia">
-        <section id="navBar">
-            <a href="/portfolio" class="logo">
-                <img src="../images/svg_logo_verde.svg" alt="Logo">
-            </a>
-            <div class="separador"></div>
-            <ul class="menu">
-                <li>
-                    <a href="/portfolio">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/about">
-                        <i class="fas fa-user-astronaut"></i>
-                        <span>About Me</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/work">
-                        <i class="fas fa-briefcase"></i>
-                        <span>My Work</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/contact">
-                        <i class="fas fa-mail-bulk"></i>
-                        <span>Contact Me</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="separador"></div>
-            <div class="contSocial">
-                    <i class="fas fa-at"></i>
-                <ul class="social">
+        <div id="navAnchor">
+            <section id="navBar">
+                <a href="/portfolio" class="logo">
+                    <img src="../images/svg_logo_verde.svg" alt="Logo">
+                </a>
+                <div class="separador"></div>
+                <ul class="menu">
                     <li>
-                        <a target="_blank" href="https://www.behance.net/santimondragon">
-                            <img src="../images/svg_Behance.svg" alt="Behance Logo">
+                        <a href="/portfolio">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.linkedin.com/in/santimondragon/">
-                            <img src="../images/svg_Linkedin.svg" alt="Linkedin Logo">
+                        <a href="/about">
+                            <i class="fas fa-user-astronaut"></i>
+                            <span>About Me</span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.github.com/santimondragon">
-                            <img src="../images/svg_Github.svg" alt="Github Logo">
+                        <a href="/work">
+                            <i class="fas fa-briefcase"></i>
+                            <span>My Work</span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.instagram.com/santimondragon">
-                            <img src="../images/svg_Instagram.svg" alt="Instagram Logo">
+                        <a href="/contact">
+                            <i class="fas fa-mail-bulk"></i>
+                            <span>Contact Me</span>
                         </a>
                     </li>
                 </ul>
+                <div class="separador"></div>
+                <div class="contSocial">
+                    <i class="fas fa-at"></i>
+                    <ul class="social">
+                        <li>
+                            <a target="_blank" href="https://www.behance.net/santimondragon">
+                                <img src="../images/svg_Behance.svg" alt="Behance Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/in/santimondragon/">
+                                <img src="../images/svg_Linkedin.svg" alt="Linkedin Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.github.com/santimondragon">
+                                <img src="../images/svg_Github.svg" alt="Github Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/santimondragon">
+                                <img src="../images/svg_Instagram.svg" alt="Instagram Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <article class="title">
+            <h1>About Me</h1>
+            <div class="decoration">
+                <div class="line"></div>
+                <div class="dot"></div>
             </div>
-        </section>
+        </article>
         <section id="intro">
             <img class="profile" src="../images/profile.jpg" alt="">
+            <div class="information">
+                <h1 class="name">Santiago Mondragón</h1>
+                <a href="https://goo.gl/maps/d8o5Fea7L8XW14L89" target="_blank" class="location">
+                    <i class="fas fa-map-marked"></i>
+                    <p>Cali, Colombia</p>
+                </a>
+                <p class="description">
+                    I am an Interactive Media Designer student at Icesi University in Cali, Colombia, currently on my
+                    last year. Always aiming to make a difference through my creative work, passioned about learning,
+                    leader with initiative and analytical thinking. Skilled in collaborative and design software, with
+                    advanced knowledge and experience in HCI, Web Design and
+                    Front-end Development. I have worked with project teams to create user-friendly and appealing
+                    application interfaces and websites for users.
+                </p>
+            </div>
+            <article class="data">
+                <a href="#">
+                    <i class="fab fa-behance"></i>
+                    <p>My Behance</p>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                    <p>My LinkedIn</p>
+                </a>
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                    <p>My GitHub</p>
+                </a>
+                <a id="downloadCV" href="../Santiago Mondragón Resume.pdf" target="pdf-frame">
+                    <span>Download Resume</span> <i class="fas fa-file-download"></i>
+                </a>
+            </article>
+        </section>
+        <section id="skillsAndExpertise">
+
+            <article id="skills">
+                <article class="subtitle">
+                    <h1>Skills</h1>
+                    <div class="decoration">
+                        <div class="line"></div>
+                        <div class="dot"></div>
+                    </div>
+                </article>
+                <div class="options">
+                    <article class="icons">
+                        <i class="fas fa-edit active"></i>
+                        <i class="fas fa-drafting-compass"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-search"></i>
+                    </article>
+                    <article class="display ui">
+                        <div id="uiContent" class="content">
+                            <h1>User Interface Design</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fab fa-adobe"></i>
+                                <i class="fab fa-figma"></i>
+                            </div>
+                        </div>
+
+                        <div id="uxContent" class="content">
+                            <h1>User Experience Design</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fab fa-adobe"></i>
+                                <i class="fab fa-figma"></i>
+                                <i class="fab fa-invision"></i>
+                            </div>
+                        </div>
+
+                        <div id="webContent" class="content">
+                            <h1>Web Development</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fab fa-angular"></i>
+                                <i class="fab fa-css3-alt"></i>
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-node-js"></i>
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
+
+                        <div id="researchContent" class="content">
+                            <h1>User Research</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fas fa-eye"></i>
+                                <i class="fas fa-sticky-note"></i>
+                                <i class="fas fa-book-reader"></i>
+                                <i class="fas fa-map"></i>
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </article>
+
+            <article id="expertise">
+                <article class="subtitle">
+                    <h1>Expertise</h1>
+                    <div class="decoration">
+                        <div class="line"></div>
+                        <div class="dot"></div>
+                    </div>
+                </article>
+            </article>
+
         </section>
     </section>
 
