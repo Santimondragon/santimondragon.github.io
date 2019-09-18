@@ -8,7 +8,7 @@ let particles = [];
 let bg;
 
 function preload() {
-    bg = loadImage('../images/bg.png');
+    bg = loadImage('../assets/images/bg.png');
 }
 
 function setup() {
@@ -60,16 +60,11 @@ function draw() {
     if (width > height) {
         if (particles.length >= height / 15 && frameCount % 10 == 1) {
             particles.shift();
-        } 
-    } else if (particles.length >= height / 35 && frameCount % 10 == 1) {
-            particles.shift();
         }
-    }
-
-    if (frameCount % 120 == 1) {
-        particles.push(new Particle(random(width), random(height), random(-2, 2), random(-2, 2)));
+    } else if (particles.length >= height / 35 && frameCount % 10 == 1) {
         particles.shift();
     }
+}
 
 
 function mousePressed() {

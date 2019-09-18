@@ -6,83 +6,547 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/p5/p5.min.js"></script>
+    <!-- P5 JS FILE -->
+    <script src="js/p5/p5.min.js"></script>
 
-    <!--  -->
-    <link href="../fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="../fontawesome/css/brands.css" rel="stylesheet">
-    <link href="../fontawesome/css/solid.css" rel="stylesheet">
-    <!--  -->
+    <!-- FONTAWESOME CSS FILE -->
+    <link href="css/fontawesome/css/all.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-    <title>Home - Santiago Mondragón</title>
+    <!-- STYLE CSS FILE -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- TITLE -->
+    <title>Santiago Mondragón</title>
 </head>
 
 <body>
+    <!-- LOADING OVERLAY -->
     <div id="overlay">
         <div id="progstat"></div>
         <div id="progress"></div>
     </div>
-    <img id="guia" src="images/pattern.png" alt="guia">
-    <nav id="navbar">
-        <article id="greet">
-            <a href="#" id="logo">
-                <img src="images/svg_logo_verde.svg" alt="">
+
+    <!-- BACKGROUND PATTERN -->
+    <img id="guia" src="assets/images/pattern.png" alt="guia">
+
+    <!-- HOME SCREEN -->
+    <section id="home" class="homeShown">
+        <nav id="navbar">
+            <article id="greet">
+                <a href="#" id="logo">
+                    <img src="assets/svg/svg_logo_verde.svg" alt="">
+                </a>
+                <h2 class="hi">Hi! I am</h2>
+                <h1 class="name">SANTIAGO MONDRAGÓN</h1>
+                <h2 class="ocupation">DESIGNER & DEVELOPER</h2>
+            </article>
+            <a id="downloadCV" href="assets/documents/Santiago Mondragón Resume.pdf" target="pdf-frame">
+                <span>Download Resume</span> <i class="fas fa-file-download"></i>
             </a>
-            <h2 class="hi">Hi! I am</h2>
-            <h1 class="name">SANTIAGO MONDRAGÓN</h1>
-            <h2 class="ocupation">DESIGNER & DEVELOPER</h2>
+            <ul id="menu">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/about">About Me</a></li>
+                <li><a href="#/work">My Work</a></li>
+                <li><a href="#/contact">Contact Me</a></li>
+            </ul>
+            <ul id="social">
+                <li>
+                    <a target="_blank" href="https://www.behance.net/santimondragon">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/santimondragon/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.github.com/santimondragon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.instagram.com/santimondragon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul id="language">
+                <li class="used">
+                    <a href="#">
+                        <span>ENG</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>ESP</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- ABOUT SCREEN -->
+    <section id="about" class="sectHidden">
+        <article class="title">
+            <h1>About Me</h1>
+            <div class="decoration">
+                <div class="line"></div>
+                <div class="dot"></div>
+            </div>
         </article>
-        <a id="downloadCV" href="../Santiago Mondragón Resume.pdf" target="pdf-frame">
-            <span>Download Resume</span> <i class="fas fa-file-download"></i>
-        </a>
-        <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="about">About Me</a></li>
-            <li><a href="work">My Work</a></li>
-            <li><a href="contact">Contact Me</a></li>
-        </ul>
-        <ul id="social">
-            <li>
+        <section id="intro">
+            <img class="profile" src="assets/images/profile.jpg" alt="">
+            <div class="information">
+                <h1 class="name">Santiago Mondragón</h1>
+                <a href="https://goo.gl/maps/d8o5Fea7L8XW14L89" target="_blank" class="location">
+                    <i class="fas fa-map-marked"></i>
+                    <p>Cali, Colombia</p>
+                </a>
+                <p class="description">
+                    I am an Interactive Media Designer student at Icesi University in Cali, Colombia, currently on my
+                    last year. Always aiming to make a difference through my creative work, passioned about learning,
+                    leader with initiative and analytical thinking. Skilled in collaborative and design software, with
+                    advanced knowledge and experience in UI/UX Design, HCI and Front-end Development. I have worked with
+                    project teams to create friendly and appealing application interfaces and websites for their users.
+                </p>
+            </div>
+            <article class="data">
                 <a target="_blank" href="https://www.behance.net/santimondragon">
                     <i class="fab fa-behance"></i>
+                    <p>My Behance</p>
                 </a>
-            </li>
-            <li>
                 <a target="_blank" href="https://www.linkedin.com/in/santimondragon/">
                     <i class="fab fa-linkedin-in"></i>
+                    <p>My LinkedIn</p>
                 </a>
-            </li>
-            <li>
                 <a target="_blank" href="https://www.github.com/santimondragon">
                     <i class="fab fa-github"></i>
+                    <p>My GitHub</p>
                 </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.instagram.com/santimondragon">
-                    <i class="fab fa-instagram"></i>
+                <a id="downloadCV" href="assets/documents/Santiago Mondragón Resume.pdf" target="pdf-frame">
+                    <span>Download Resume</span> <i class="fas fa-file-download"></i>
                 </a>
-            </li>
-        </ul>
-        <ul id="language">
-            <li>
-                <a href="#">
-                    <span>ESP</span>
-                </a>
-            </li>
-            <li class="used">
-                <a href="#">
-                    <span>ENG</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+            </article>
+        </section>
+        <section id="skillsAndExpertise">
 
+            <article id="skills">
+                <article class="subtitle">
+                    <h1>Skills</h1>
+                    <div class="decoration">
+                        <div class="line"></div>
+                        <div class="dot"></div>
+                    </div>
+                </article>
+                <div class="options">
+                    <article class="icons">
+                        <i class="fas fa-laptop-code active"></i>
+                        <i class="fas fa-drafting-compass"></i>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-search"></i>
+                    </article>
+                    <article class="display web">
+
+                        <div id="webContent" class="content">
+                            <h1>Front-end Development</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fab fa-angular"></i>
+                                <i class="fab fa-css3-alt"></i>
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
+
+                        <div id="uxContent" class="content">
+                            <h1>User Experience Design</h1>
+                            <p>Able to create products, solutions or prototypes, combining different kinds of
+                                methodologies, that customers / users would be attracted to, be easy to use and quickly
+                                to understand, in order to bring them the best experience possible.</p>
+
+                            <div class="software">
+                                <i class="fab fa-adobe"></i>
+                                <i class="fab fa-figma"></i>
+                                <i class="fab fa-invision"></i>
+                            </div>
+                        </div>
+
+                        <div id="uiContent" class="content">
+                            <h1>User Interface Design</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fab fa-adobe"></i>
+                                <i class="fab fa-figma"></i>
+                            </div>
+                        </div>
+
+                        <div id="researchContent" class="content">
+                            <h1>User Research</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fas fa-eye"></i>
+                                <i class="fas fa-sticky-note"></i>
+                                <i class="fas fa-book-reader"></i>
+                                <i class="fas fa-map"></i>
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </article>
+
+            <article id="expertise">
+                <article class="subtitle">
+                    <h1>Expertise</h1>
+                    <div class="decoration">
+                        <div class="line"></div>
+                        <div class="dot"></div>
+                    </div>
+                </article>
+                <div class="options">
+                    <article class="display leader">
+                        <div id="leaderContent" class="content">
+                            <h1>Leadership</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fas fa-users"></i>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                        </div>
+
+                        <div id="teamContent" class="content">
+                            <h1>Team Work</h1>
+                            <p>Able to create products, solutions or prototypes, combining different kinds of
+                                methodologies, that customers / users would be attracted to, be easy to use and quickly
+                                to understand, in order to bring them the best experience possible.</p>
+
+                            <div class="software">
+                                <i class="fas fa-comments"></i>
+                                <i class="fab fa-slack"></i>
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                        </div>
+
+                        <div id="analyticContent" class="content">
+                            <h1>Analytical Thinking</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fas fa-puzzle-piece"></i>
+                                <i class="fas fa-map-signs"></i>
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        </div>
+
+                        <div id="businessContent" class="content">
+                            <h1>Business Focused</h1>
+                            <p>Able to define the form, function, usability, ergonomics, brand image and other aspects
+                                that affect the external appearance of user interfaces in systems of all types, all this
+                                through principles of visual and graphic design.</p>
+
+                            <div class="software">
+                                <i class="fas fa-chart-line"></i>
+                                <i class="fas fa-percent"></i>
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="icons">
+                        <i class="fas fa-child active"></i>
+                        <i class="fas fa-users"></i>
+                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-search-dollar"></i>
+                    </article>
+                </div>
+            </article>
+
+        </section>
+        <article class="title">
+            <h1>Featured Work</h1>
+            <div class="decoration">
+                <div class="line"></div>
+                <div class="dot"></div>
+            </div>
+        </article>
+        <section id="featuredWork">
+
+            <article class="project" id="main">
+                <span class="type"><i class="fas fa-drafting-compass"></i> UI/UX Design</span>
+                <span class="year">2018</span>
+                <span class="name">iPets</span>
+                <img class="bg" src="../assets/images/iPets_bg.jpg" alt="iPets Project Bg">
+                <img class="prev" src="../assets/images/iPets_prev.png" alt="iPets Project prev">
+                <a href="#" class="overlay">
+                    <i class="fas fa-search"></i>
+                    <span>Ver Proyecto.</span>
+                </a>
+                <div class="links">
+                    <a target="_blank" href="https://www.behance.net/gallery/79220767/iPets-UIUX-Design">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article id="secundary">
+                <article class="project" id="projectTwo">
+                    <span class="type"><i class="fas fa-laptop-code"></i>Web Development</span>
+                    <span class="year">2018</span>
+                    <span class="name">BuddyFinder</span>
+                    <img class="bg" src="../assets/images/buddyFinder_bg.jpg" alt="iPets Project Bg">
+                    <img class="prev" src="../assets/images/buddyFinder_prev.png" alt="iPets Project prev">
+                    <a href="#" class="overlay">
+                        <i class="fas fa-search"></i>
+                        <span>Ver Proyecto.</span>
+                    </a>
+                    <div class="links">
+                        <a href="#">
+                            <i class="fab fa-behance"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fas fa-globe-americas"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="project" id="projectThree">
+                    <span class="type"><i class="fas fa-drafting-compass"></i>UI/UX Design</span>
+                    <span class="year">2017</span>
+                    <span class="name">Banner</span>
+                    <img class="bg" src="../assets/images/buddyFinder_bg.jpg" alt="iPets Project Bg">
+                    <img class="prev" src="../assets/images/buddyFinder_prev.png" alt="iPets Project prev">
+                    <a href="#" class="overlay">
+                        <i class="fas fa-search"></i>
+                        <span>Ver Proyecto.</span>
+                    </a>
+                    <div class="links">
+                        <a href="#">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </article>
+            </article>
+
+        </section>
+    </section>
+
+    <!-- WORK SCREEN -->
+    <section id="myWork" class="sectHidden">
+        <article class="title">
+            <h1>My Work</h1>
+            <div class="decoration">
+                <div class="line"></div>
+                <div class="dot"></div>
+            </div>
+        </article>
+        <section id="featuredWork">
+
+            <article class="project" id="main">
+                <span class="type"><i class="fas fa-drafting-compass"></i> UI/UX Design</span>
+                <span class="year">2018</span>
+                <span class="name">iPets</span>
+                <img class="bg" src="../assets/images/iPets_bg.jpg" alt="iPets Project Bg">
+                <img class="prev" src="../assets/images/iPets_prev.png" alt="iPets Project prev">
+                <a href="#" class="overlay">
+                    <i class="fas fa-search"></i>
+                    <span>Ver Proyecto.</span>
+                </a>
+                <div class="links">
+                    <a target="_blank" href="https://www.behance.net/gallery/79220767/iPets-UIUX-Design">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article id="secundary">
+                <article class="project" id="projectTwo">
+                    <span class="type"><i class="fas fa-laptop-code"></i>Web Development</span>
+                    <span class="year">2018</span>
+                    <span class="name">BuddyFinder</span>
+                    <img class="bg" src="../assets/images/buddyFinder_bg.jpg" alt="iPets Project Bg">
+                    <img class="prev" src="../assets/images/buddyFinder_prev.png" alt="iPets Project prev">
+                    <a href="#" class="overlay">
+                        <i class="fas fa-search"></i>
+                        <span>Ver Proyecto.</span>
+                    </a>
+                    <div class="links">
+                        <a href="#">
+                            <i class="fab fa-behance"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fas fa-globe-americas"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="project" id="projectThree">
+                    <span class="type"><i class="fas fa-drafting-compass"></i>UI/UX Design</span>
+                    <span class="year">2017</span>
+                    <span class="name">Banner</span>
+                    <img class="bg" src="../assets/images/buddyFinder_bg.jpg" alt="iPets Project Bg">
+                    <img class="prev" src="../assets/images/buddyFinder_prev.png" alt="iPets Project prev">
+                    <a href="#" class="overlay">
+                        <i class="fas fa-search"></i>
+                        <span>Ver Proyecto.</span>
+                    </a>
+                    <div class="links">
+                        <a href="#">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </article>
+            </article>
+
+        </section>
+    </section>
+
+    <!-- CONTACT SCREEN -->
+    <section id="contact" class="sectHidden">
+        <article class="title">
+            <h1>Contact Me</h1>
+            <div class="decoration">
+                <div class="line"></div>
+                <div class="dot"></div>
+            </div>
+        </article>
+        <section id="contactInformation">
+            <a href="tel:+57317435163" class="info"><i class="fas fa-phone"></i> +57 317 435 1683</h1>
+                <a href="mailto:santimondragonm@gmail.com?Subject=Hello Santi!" target="_top" class="info"><i
+                        class="fas fa-envelope"></i> santimondragonm@gmail.com</h1>
+                    <a href="https://goo.gl/maps/d8o5Fea7L8XW14L89" target="_blank" class="info"><i
+                            class="fas fa-map-marked"></i> Cali, Colombia</a>
+        </section>
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+            onload="if(submitted) {window.location='contact.html';}"></iframe>
+        <form id="contactForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdxn-hsND8G5hCBLKGWlBPapCaL05socw2jo7TtXvIg8Z_8ZQ/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="half">
+                <article>
+                    <label for="entry.293611445">Full Name</label>
+                    <input type="text" placeholder="Your Full Name" name="entry.293611445" required>
+                </article>
+                <article>
+                    <label for="entry.102774836">Contact Number</label>
+                    <input type="number" placeholder="Your Contact Number" name="entry.102774836" required>
+                </article>
+            </div>
+            <label for="entry.1181057222">Email Address</label>
+            <input type="email" placeholder="Your Email Address" name="entry.1181057222" required>
+
+            <label for="entry.1770322555">Message</label>
+            <textarea rows="8" placeholder="Your Message" name="entry.1770322555"></textarea>
+
+            <button type="submit"><span>Send</span> <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </section>
+
+    <!-- SIDE NAVBAR -->
+    <div id="navAnchor" class="navbarHidden">
+        <section id="navBar">
+            <a href="/#/" class="logo">
+                <img src="../assets/svg/svg_logo_verde.svg" alt="Logo">
+            </a>
+            <div class="separador"></div>
+            <ul class="menu">
+                <li>
+                    <a href="/#/">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#/about">
+                        <i class="fas fa-user-astronaut"></i>
+                        <span>About Me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#/work">
+                        <i class="fas fa-briefcase"></i>
+                        <span>My Work</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#/contact">
+                        <i class=" fas fa-mail-bulk"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="separador"></div>
+            <div class="contSocial">
+                <i class="fas fa-at"></i>
+                <ul class="social">
+                    <li>
+                        <a target="_blank" href="https://www.behance.net/santimondragon">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/santimondragon/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.github.com/santimondragon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/santimondragon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- P5 SCRIPTS -->
     <script src="js/p5/sketch.js"></script>
     <script src="js/p5/particle.js"></script>
+
+    <!-- JQUERY SCRIPT -->
     <script src="js/jquery.min.js"></script>
+
+    <!-- JS SCRIPT -->
     <script src="js/main.js"></script>
+    
+    <!-- PATHING JS FILE -->
+    <script defer src="js/pathing.js"></script>
+
 </body>
 
 </html>

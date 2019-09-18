@@ -1,11 +1,45 @@
-let menuItems = document.querySelectorAll("body #navbar.sideBar #menu li");
-let menuItemWidth = menuItems[0];
+const mainMenuItems = [...document.querySelectorAll("#home #navbar #menu li")];
+const sideMenuItems = [...document.querySelectorAll("#navBar .menu li a")];
 
-let about = document.getElementById("about");
+const home = document.querySelector("#home");
+const about = document.querySelector("#about");
+const myWork = document.querySelector("#myWork");
+const contact = document.querySelector("#contact");
+const navbar = document.querySelector("#navAnchor");
 
+mainMenuItems.forEach((e, i) => {
+    e.addEventListener('click', () => {
+        // Shows navbar
+        navbar.className = "navbarShown";
+        home.className = "sectHidden";
 
-let skills = [...document.querySelectorAll("#skills .options .icons i")]
-let skillDisplay = document.querySelector("#skills .options .display")
+        // Shows the corresponding section
+        if (i == 1) {
+            about.className = "sectShown";
+            sideMenuItems[1].className = "active";
+        }
+        if (i == 2) {
+            myWork.className = "sectShown";
+            sideMenuItems[2].className = "active";
+        }
+        if (i == 3) {
+            contact.className = "sectShown";
+            sideMenuItems[3].className = "active";
+        }
+    })
+});
+
+sideMenuItems.forEach((e, i) => {
+    e.addEventListener('click', () => {
+        for (let i = 0; i < sideMenuItems.length; i++) {
+            sideMenuItems[i].classList.remove("active");
+        }
+        e.className = "active";
+    })
+});
+
+const skills = [...document.querySelectorAll("#skills .options .icons i")]
+const skillDisplay = document.querySelector("#skills .options .display")
 
 skills.forEach((e, i) => {
     e.addEventListener('click', () => {
@@ -30,8 +64,8 @@ skills.forEach((e, i) => {
     })
 });
 
-let expertise = [...document.querySelectorAll("#expertise .options .icons i")]
-let expertiseDisplay = document.querySelector("#expertise .options .display")
+const expertise = [...document.querySelectorAll("#expertise .options .icons i")]
+const expertiseDisplay = document.querySelector("#expertise .options .display")
 
 expertise.forEach((e, i) => {
     e.addEventListener('click', () => {
