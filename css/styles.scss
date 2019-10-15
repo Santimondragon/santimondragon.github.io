@@ -1822,599 +1822,6 @@ body {
             }
         }
 
-        #intro {
-            width: 100%;
-            max-width: $max-width;
-            background: $darkerBlack;
-            border-radius: 5px;
-            box-shadow: 0px 2px 10px -3px $shadow;
-            padding: 40px;
-            margin-bottom: 40px;
-
-            // Flex Attributes
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-content: center;
-            align-items: center;
-
-            .profile {
-                flex: 0 1 auto;
-                height: 100%;
-                max-height: 200px;
-                border-radius: 100%;
-                margin-right: 40px;
-            }
-
-            .information {
-                flex: 1 1 auto;
-                margin-right: 40px;
-
-                .location {
-                    margin: 6px 0;
-                    padding: 6px 0;
-                    width: fit-content;
-
-                    * {
-                        color: $green;
-                    }
-
-                    i {
-                        margin-right: 5px;
-                        font-size: 12px;
-                    }
-
-                    // Flex Attributes
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-content: center;
-                    align-items: center;
-                }
-
-                .description {
-                    line-height: 1.6em;
-                    font-weight: 400;
-                    font-size: 14px;
-                    text-align: justify;
-                }
-            }
-
-            .data {
-                flex: 0 1 auto;
-                min-width: 200px;
-
-                // Flex Attributes
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-content: flex-start;
-                align-items: flex-start;
-
-                a {
-                    margin-bottom: 12px;
-                    padding-right: 25px;
-
-                    // Flex Attributes
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-content: center;
-                    align-items: center;
-
-                    &:last-child {
-                        margin: 0;
-                    }
-
-                    i {
-                        width: 35px;
-                        height: 35px;
-                        background: $darkGray;
-                        color: $green;
-                        margin-right: 10px;
-                        box-shadow: 0px 2px 10px -4px $shadow;
-
-                        // Flex Attributes
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-content: center;
-                        align-items: center;
-                    }
-
-                    p {
-                        font-size: 15px;
-                        color: $green;
-                    }
-
-                    &:hover {
-                        * {
-                            color: $lightGray;
-                        }
-
-                        i {
-                            background: $black;
-                        }
-                    }
-                }
-
-                #downloadCV {
-                    position: relative;
-                    background: $blackOpacityMenu;
-                    box-shadow: 0px 2px 10px -4px $shadow;
-                    padding: 12px 15px;
-
-                    span {
-                        font-size: 15px;
-                        font-weight: 500;
-                        color: $green;
-                    }
-
-                    i {
-                        background: none;
-                        position: absolute;
-                        height: 0px;
-                        width: 0px;
-                        padding: 0;
-                        right: 15px;
-                        opacity: 0;
-                    }
-
-                    &:hover {
-                        background: $black;
-                        padding-right: 50px;
-
-                        span {
-                            color: $lightGray;
-                        }
-
-                        i {
-                            color: $lightGray;
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-        }
-
-        #skillsAndExpertise {
-            width: 100%;
-            max-width: $max_width;
-            margin-bottom: 40px;
-            box-shadow: none;
-
-            // Flex Attributes
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-content: center;
-            align-items: center;
-
-            .subtitle {
-                margin-bottom: 30px;
-
-                // Flex Attributes
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-content: center;
-                align-items: center;
-
-                h1 {
-                    font-size: 24px;
-                    margin-bottom: 10px;
-                }
-
-                .decoration {
-                    position: relative;
-                    // Flex Attributes
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-content: center;
-                    align-items: center;
-
-                    .line {
-                        position: absolute;
-                        background: $green;
-                        opacity: 0.5;
-                        height: 1px;
-                        width: 50px;
-                    }
-
-                    .dot {
-                        position: absolute;
-                        background: $green;
-                        width: 7px;
-                        height: 7px;
-                        border-radius: 7px;
-                    }
-                }
-            }
-
-            #skills {
-                height: 100%;
-                flex: 50%;
-                margin-right: 20px;
-
-                // Flex Attributes
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-content: center;
-                align-items: center;
-
-                .options {
-                    width: 100%;
-                    background: $darkerBlack;
-                    border-radius: 5px;
-                    box-shadow: 0px 2px 10px -3px $shadow;
-                    padding: 40px;
-
-                    // Flex Attributes
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-content: center;
-                    align-items: center;
-
-                    .icons {
-                        flex: 0 1 auto;
-                        margin-right: 40px;
-                        // Flex Attributes
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-content: center;
-                        align-items: center;
-
-                        i {
-                            width: 45px;
-                            height: 45px;
-                            background: $darkGray;
-                            color: $fontGray;
-                            margin-bottom: 15px;
-                            box-shadow: 0px 2px 10px -4px $shadow;
-                            cursor: pointer;
-
-                            // Flex Attributes
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-content: center;
-                            align-items: center;
-
-                            &:last-child {
-                                margin: 0;
-                            }
-
-                            &.active {
-                                color: $green;
-                            }
-
-                            &:hover {
-                                color: $green;
-                            }
-                        }
-                    }
-
-                    .display {
-                        flex: 1 1 auto;
-                        height: 100%;
-                        padding: 15px 10px;
-
-                        .content {
-                            height: 100%;
-                            animation-name: appear;
-                            animation-duration: 0.6s;
-                            animation-timing-function: ease-out;
-                            animation-fill-mode: forwards;
-
-                            // Flex Attributes
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-end;
-                            align-content: center;
-                            align-items: center;
-
-                            p {
-                                line-height: 1.6em;
-                                font-weight: 300;
-                                font-size: 13px;
-                                text-align: center;
-                                flex: 1 1 auto;
-
-                                // Flex Attributes
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-content: center;
-                                align-items: center;
-
-                            }
-
-                            .software {
-
-                                i {
-                                    font-size: 20px;
-                                    color: #707070;
-                                    padding: 0 5px;
-                                }
-                            }
-
-                            h1 {
-                                color: $green;
-                                font-size: 26px;
-                            }
-                        }
-
-                        &.ui {
-                            #uiContent {
-                                display: flex
-                            }
-
-                            #uxContent {
-                                display: none
-                            }
-
-                            #webContent {
-                                display: none
-                            }
-
-                            #researchContent {
-                                display: none
-                            }
-                        }
-
-                        &.ux {
-                            #uiContent {
-                                display: none
-                            }
-
-                            #uxContent {
-                                display: flex
-                            }
-
-                            #webContent {
-                                display: none
-                            }
-
-                            #researchContent {
-                                display: none
-                            }
-                        }
-
-                        &.web {
-                            #uiContent {
-                                display: none
-                            }
-
-                            #uxContent {
-                                display: none
-                            }
-
-                            #webContent {
-                                display: flex
-                            }
-
-                            #researchContent {
-                                display: none
-                            }
-                        }
-
-                        &.research {
-                            #uiContent {
-                                display: none
-                            }
-
-                            #uxContent {
-                                display: none
-                            }
-
-                            #webContent {
-                                display: none
-                            }
-
-                            #researchContent {
-                                display: flex
-                            }
-                        }
-                    }
-                }
-            }
-
-            #expertise {
-                height: 100%;
-                flex: 50%;
-                margin-left: 20px;
-
-                // Flex Attributes
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-content: center;
-                align-items: center;
-
-                .options {
-                    width: 100%;
-                    background: $darkerBlack;
-                    border-radius: 5px;
-                    box-shadow: 0px 2px 10px -3px $shadow;
-                    padding: 40px;
-
-                    // Flex Attributes
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-content: center;
-                    align-items: center;
-
-                    .icons {
-                        flex: 0 1 auto;
-                        margin-left: 40px;
-                        // Flex Attributes
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-content: center;
-                        align-items: center;
-
-                        i {
-                            width: 45px;
-                            height: 45px;
-                            background: $darkGray;
-                            color: $fontGray;
-                            margin-bottom: 15px;
-                            box-shadow: 0px 2px 10px -4px $shadow;
-                            cursor: pointer;
-
-                            // Flex Attributes
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-content: center;
-                            align-items: center;
-
-                            &:last-child {
-                                margin: 0;
-                            }
-
-                            &.active {
-                                color: $green;
-                            }
-
-                            &:hover {
-                                color: $green;
-                            }
-                        }
-                    }
-
-                    .display {
-                        flex: 1 1 auto;
-                        height: 100%;
-                        padding: 15px 10px;
-
-                        .content {
-                            height: 100%;
-                            animation-name: appear;
-                            animation-duration: 0.6s;
-                            animation-timing-function: ease-out;
-                            animation-fill-mode: forwards;
-
-                            // Flex Attributes
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-end;
-                            align-content: center;
-                            align-items: center;
-
-                            p {
-                                line-height: 1.6em;
-                                font-weight: 300;
-                                font-size: 13px;
-                                text-align: center;
-                                flex: 1 1 auto;
-
-                                // Flex Attributes
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-content: center;
-                                align-items: center;
-
-                            }
-
-                            .software {
-
-                                i {
-                                    font-size: 20px;
-                                    color: #707070;
-                                    padding: 0 5px;
-                                }
-                            }
-
-                            h1 {
-                                color: $green;
-                                font-size: 26px;
-                            }
-                        }
-
-                        &.leader {
-                            #leaderContent {
-                                display: flex
-                            }
-
-                            #teamContent {
-                                display: none
-                            }
-
-                            #analyticContent {
-                                display: none
-                            }
-
-                            #businessContent {
-                                display: none
-                            }
-                        }
-
-                        &.team {
-                            #leaderContent {
-                                display: none
-                            }
-
-                            #teamContent {
-                                display: flex
-                            }
-
-                            #analyticContent {
-                                display: none
-                            }
-
-                            #businessContent {
-                                display: none
-                            }
-                        }
-
-                        &.analytic {
-                            #leaderContent {
-                                display: none
-                            }
-
-                            #teamContent {
-                                display: none
-                            }
-
-                            #analyticContent {
-                                display: flex
-                            }
-
-                            #businessContent {
-                                display: none
-                            }
-                        }
-
-                        &.business {
-                            #leaderContent {
-                                display: none
-                            }
-
-                            #teamContent {
-                                display: none
-                            }
-
-                            #analyticContent {
-                                display: none
-                            }
-
-                            #businessContent {
-                                display: flex
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         #featuredWork {
             width: 100%;
             max-width: $max-width;
@@ -3377,227 +2784,176 @@ body {
 
 @media only screen and (max-width: 700px) {
     body {
-        #navbar {
-            //background: $darkGray;
-            width: 100vw;
-            height: 100%;
-            padding: 40px 30px 20px;
+        #home {
+            #navbar {
+                //background: $darkGray;
+                width: 100vw;
+                height: 100%;
+                padding: 40px 30px 20px;
 
-            // Flex Attributes
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-content: center;
-            align-items: center;
-
-            #greet {
-                width: 100%;
-                padding: 0;
-
-                #logo {
-                    img {
-                        width: 100px;
-                    }
-                }
-
-                .hi {
-                    font-weight: 400;
-                    font-size: 18px;
-                }
-
-                .name {
-                    font-size: 25px;
-                    font-weight: 800;
-                }
-
-                .ocupation {
-                    font-size: 21px;
-                    font-weight: 500;
-                }
-            }
-
-            #downloadCV {
-                align-self: flex-start;
-                position: relative;
-                background: $blackOpacityMenu;
-                box-shadow: 0px 2px 10px -4px $shadow;
-                padding: 12px 15px;
-
-                span {
-                    font-size: 15px;
-                    font-weight: 500;
-                    color: $green;
-                }
-
-                i {
-                    background: none;
-                    position: absolute;
-                    padding: 0;
-                    right: 15px;
-                    opacity: 0;
-                }
-
-                &:hover {
-                    background: $black;
-                    padding-right: 50px;
-
-                    span {
-                        color: $lightGray;
-                    }
-
-                    i {
-                        color: $lightGray;
-                        opacity: 1;
-                    }
-                }
-            }
-
-            #menu {
-                margin-top: 0;
-                position: unset;
-                transform: none;
-                border: none;
-                width: 100%;
                 // Flex Attributes
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: space-evenly;
                 align-content: center;
                 align-items: center;
 
-                li {
-                    flex: 0 1 32%;
-                    width: unset;
-                    height: 100px;
-                    border: none;
+                #greet {
+                    width: 100%;
+                    padding: 0;
+
+                    #logo {
+                        img {
+                            width: 100px;
+                        }
+                    }
+
+                    .hi {
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+
+                    .name {
+                        font-size: 25px;
+                        font-weight: 800;
+                    }
+
+                    .ocupation {
+                        font-size: 21px;
+                        font-weight: 500;
+                    }
+                }
+
+                #downloadCV {
+                    align-self: flex-start;
+                    position: relative;
                     background: $blackOpacityMenu;
                     box-shadow: 0px 2px 10px -4px $shadow;
-                    padding-top: 5px;
+                    padding: 12px 15px;
 
-
-                    &:first-child {
-                        display: none;
+                    span {
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $green;
                     }
 
-                    &:nth-child(2) {
-                        a {
-                            justify-content: center;
-                            padding-bottom: 0;
-                        }
-                    }
-
-                    &:nth-child(4) {
-                        a {
-                            justify-content: center;
-                            padding-top: 0;
-                        }
-                    }
-
-                    a {
-                        width: 100%;
-                        height: 100%;
-                        font-size: 14px;
-                        transform: none;
-
-                        // Flex Attributes
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-content: center;
-                        align-items: center;
-
-                        &::after {
-                            margin-top: 3px;
-                            content: " ";
-                            width: 10px;
-                            height: 2px;
-                            border-bottom: solid 1px $white;
-                        }
+                    i {
+                        background: none;
+                        position: absolute;
+                        padding: 0;
+                        right: 15px;
+                        opacity: 0;
                     }
 
                     &:hover {
                         background: $black;
-                        border: none;
+                        padding-right: 50px;
 
-                        a {
-                            color: $green;
-                            font-size: 14px;
-                            border: none;
+                        span {
+                            color: $lightGray;
+                        }
 
-                            &::after {
-                                border-bottom: solid 2px $green;
-                            }
+                        i {
+                            color: $lightGray;
+                            opacity: 1;
                         }
                     }
                 }
-            }
 
-            #social {
-                width: 151px;
-                margin: 0;
-                align-self: center;
-                // Flex Attributes
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-content: center;
-                align-items: center;
-
-                li {
-                    background: $blackOpacityMenu;
-                    box-shadow: 0px 2px 10px -4px $shadow;
+                #menu {
+                    margin-top: 0;
+                    position: unset;
+                    transform: none;
+                    border: none;
+                    width: 100%;
                     // Flex Attributes
                     display: flex;
                     flex-direction: row;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-content: center;
                     align-items: center;
 
-                    a {
-                        height: 34px;
-                        width: 34px;
+                    li {
+                        flex: 0 1 32%;
+                        width: unset;
+                        height: 100px;
+                        border: none;
+                        background: $blackOpacityMenu;
+                        box-shadow: 0px 2px 10px -4px $shadow;
+                        padding-top: 5px;
 
-                        // Flex Attributes
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-content: center;
-                        align-items: center;
 
-                        img {
-                            width: 18px;
-                            max-height: 14px;
-                            opacity: 0.5;
-                            filter: brightness(200%);
+                        &:first-child {
+                            display: none;
+                        }
+
+                        &:nth-child(2) {
+                            a {
+                                justify-content: center;
+                                padding-bottom: 0;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            a {
+                                justify-content: center;
+                                padding-top: 0;
+                            }
+                        }
+
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            font-size: 14px;
+                            transform: none;
+
+                            // Flex Attributes
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+
+                            &::after {
+                                margin-top: 3px;
+                                content: " ";
+                                width: 10px;
+                                height: 2px;
+                                border-bottom: solid 1px $white;
+                            }
                         }
 
                         &:hover {
                             background: $black;
+                            border: none;
 
-                            img {
-                                opacity: 1;
-                                filter: brightness(100%);
+                            a {
+                                color: $green;
+                                font-size: 14px;
+                                border: none;
+
+                                &::after {
+                                    border-bottom: solid 2px $green;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            #language {
-                width: 65px;
-                margin: 0;
-                align-self: center;
+                #social {
+                    width: 151px;
+                    margin: 0;
+                    align-self: center;
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-content: center;
+                    align-items: center;
 
-                // Flex Attributes
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-content: center;
-                align-items: center;
-
-                li {
-                    a {
-
+                    li {
+                        background: $blackOpacityMenu;
+                        box-shadow: 0px 2px 10px -4px $shadow;
                         // Flex Attributes
                         display: flex;
                         flex-direction: row;
@@ -3605,26 +2961,79 @@ body {
                         align-content: center;
                         align-items: center;
 
-                        span {
-                            color: $fontGray;
-                            padding: 3px 0;
-                        }
-                    }
-
-                    &:hover {
                         a {
-                            span {
-                                color: $white;
-                                border-bottom: solid 2px $green;
+                            height: 34px;
+                            width: 34px;
+
+                            // Flex Attributes
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+
+                            img {
+                                width: 18px;
+                                max-height: 14px;
+                                opacity: 0.5;
+                                filter: brightness(200%);
+                            }
+
+                            &:hover {
+                                background: $black;
+
+                                img {
+                                    opacity: 1;
+                                    filter: brightness(100%);
+                                }
                             }
                         }
                     }
+                }
 
-                    &.used {
+                #language {
+                    width: 65px;
+                    margin: 0;
+                    align-self: center;
+
+                    // Flex Attributes
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-content: center;
+                    align-items: center;
+
+                    li {
                         a {
+
+                            // Flex Attributes
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+
                             span {
-                                color: $white;
-                                border-bottom: solid 2px $green;
+                                color: $fontGray;
+                                padding: 3px 0;
+                            }
+                        }
+
+                        &:hover {
+                            a {
+                                span {
+                                    color: $white;
+                                    border-bottom: solid 2px $green;
+                                }
+                            }
+                        }
+
+                        &.used {
+                            a {
+                                span {
+                                    color: $white;
+                                    border-bottom: solid 2px $green;
+                                }
                             }
                         }
                     }
