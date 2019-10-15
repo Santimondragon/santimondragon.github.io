@@ -90,7 +90,17 @@ expertise.forEach((e, i) => {
     })
 });
 
-;
+const hamOpen = document.querySelector("#hamOpen");
+const hamClose = document.querySelector("#hamClose");
+
+hamOpen.addEventListener("click", () => {
+    navbar.className = "navbarShown";
+});
+
+hamClose.addEventListener("click", () => {
+    navbar.className = "navbarHidden";
+});
+
 (function () {
     function id(v) {
         return document.getElementById(v);

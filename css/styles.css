@@ -150,18 +150,18 @@ body #bg {
 
 body #navAnchor {
   position: fixed;
-  top: 50%;
+  height: 100vh;
+  top: 0;
   z-index: 9;
-  height: 0px;
   -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -170,6 +170,11 @@ body #navAnchor {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body #navAnchor #hamOpen,
+body #navAnchor #hamClose {
+  display: none;
 }
 
 body #navAnchor #navBar {
@@ -2356,792 +2361,6 @@ body #myWork .title .decoration .dot {
   border-radius: 7px;
 }
 
-body #myWork #intro {
-  width: 100%;
-  max-width: 1280px;
-  background: #0C0C0C;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  margin-bottom: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #intro .profile {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  height: 100%;
-  max-height: 200px;
-  border-radius: 100%;
-  margin-right: 40px;
-}
-
-body #myWork #intro .information {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  margin-right: 40px;
-}
-
-body #myWork #intro .information .location {
-  margin: 6px 0;
-  padding: 6px 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #intro .information .location * {
-  color: #8DFFAA;
-}
-
-body #myWork #intro .information .location i {
-  margin-right: 5px;
-  font-size: 12px;
-}
-
-body #myWork #intro .information .description {
-  line-height: 1.6em;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: justify;
-}
-
-body #myWork #intro .data {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  min-width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-body #myWork #intro .data a {
-  margin-bottom: 12px;
-  padding-right: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #intro .data a:last-child {
-  margin: 0;
-}
-
-body #myWork #intro .data a i {
-  width: 35px;
-  height: 35px;
-  background: #232323;
-  color: #8DFFAA;
-  margin-right: 10px;
-  -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #intro .data a p {
-  font-size: 15px;
-  color: #8DFFAA;
-}
-
-body #myWork #intro .data a:hover * {
-  color: #c8c8c8;
-}
-
-body #myWork #intro .data a:hover i {
-  background: #0F0F0F;
-}
-
-body #myWork #intro .data #downloadCV {
-  position: relative;
-  background: #1E1E1EDD;
-  -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-  padding: 12px 15px;
-}
-
-body #myWork #intro .data #downloadCV span {
-  font-size: 15px;
-  font-weight: 500;
-  color: #8DFFAA;
-}
-
-body #myWork #intro .data #downloadCV i {
-  background: none;
-  position: absolute;
-  height: 0px;
-  width: 0px;
-  padding: 0;
-  right: 15px;
-  opacity: 0;
-}
-
-body #myWork #intro .data #downloadCV:hover {
-  background: #0F0F0F;
-  padding-right: 50px;
-}
-
-body #myWork #intro .data #downloadCV:hover span {
-  color: #c8c8c8;
-}
-
-body #myWork #intro .data #downloadCV:hover i {
-  color: #c8c8c8;
-  opacity: 1;
-}
-
-body #myWork #skillsAndExpertise {
-  width: 100%;
-  max-width: 1280px;
-  margin-bottom: 40px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise .subtitle {
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise .subtitle h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-body #myWork #skillsAndExpertise .subtitle .decoration {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise .subtitle .decoration .line {
-  position: absolute;
-  background: #8DFFAA;
-  opacity: 0.5;
-  height: 1px;
-  width: 50px;
-}
-
-body #myWork #skillsAndExpertise .subtitle .decoration .dot {
-  position: absolute;
-  background: #8DFFAA;
-  width: 7px;
-  height: 7px;
-  border-radius: 7px;
-}
-
-body #myWork #skillsAndExpertise #skills {
-  height: 100%;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  margin-right: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #skills .options {
-  width: 100%;
-  background: #0C0C0C;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #skills .options .icons {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  margin-right: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #skills .options .icons i {
-  width: 45px;
-  height: 45px;
-  background: #232323;
-  color: #4b4b4b;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #skills .options .icons i:last-child {
-  margin: 0;
-}
-
-body #myWork #skillsAndExpertise #skills .options .icons i.active {
-  color: #8DFFAA;
-}
-
-body #myWork #skillsAndExpertise #skills .options .icons i:hover {
-  color: #8DFFAA;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  height: 100%;
-  padding: 15px 10px;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display .content {
-  height: 100%;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display .content p {
-  line-height: 1.6em;
-  font-weight: 300;
-  font-size: 13px;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display .content .software i {
-  font-size: 20px;
-  color: #707070;
-  padding: 0 5px;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display .content h1 {
-  color: #8DFFAA;
-  font-size: 26px;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ui #uiContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ui #uxContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ui #webContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ui #researchContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ux #uiContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ux #uxContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ux #webContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.ux #researchContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.web #uiContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.web #uxContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.web #webContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.web #researchContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.research #uiContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.research #uxContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.research #webContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #skills .options .display.research #researchContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #expertise {
-  height: 100%;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  margin-left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #expertise .options {
-  width: 100%;
-  background: #0C0C0C;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .icons {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  margin-left: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .icons i {
-  width: 45px;
-  height: 45px;
-  background: #232323;
-  color: #4b4b4b;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .icons i:last-child {
-  margin: 0;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .icons i.active {
-  color: #8DFFAA;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .icons i:hover {
-  color: #8DFFAA;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  height: 100%;
-  padding: 15px 10px;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display .content {
-  height: 100%;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display .content p {
-  line-height: 1.6em;
-  font-weight: 300;
-  font-size: 13px;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display .content .software i {
-  font-size: 20px;
-  color: #707070;
-  padding: 0 5px;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display .content h1 {
-  color: #8DFFAA;
-  font-size: 26px;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.leader #leaderContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.leader #teamContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.leader #analyticContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.leader #businessContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.team #leaderContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.team #teamContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.team #analyticContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.team #businessContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.analytic #leaderContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.analytic #teamContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.analytic #analyticContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.analytic #businessContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.business #leaderContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.business #teamContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.business #analyticContent {
-  display: none;
-}
-
-body #myWork #skillsAndExpertise #expertise .options .display.business #businessContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 body #myWork #featuredWork {
   width: 100%;
   max-width: 1280px;
@@ -4427,7 +3646,142 @@ body .navbarHidden {
 }
 
 @media only screen and (max-width: 700px) {
-  body #navbar {
+  body #navAnchor {
+    position: fixed;
+    width: 250px;
+    background: #0F0F0F;
+    z-index: 9;
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  body #navAnchor #hamOpen,
+  body #navAnchor #hamClose {
+    display: block;
+    position: absolute;
+    top: 0px;
+    background: #0C0C0C;
+    font-size: 20px;
+    color: #8DFFAA;
+    padding: 25px;
+    max-width: 65px;
+    max-height: 65px;
+    -webkit-transition-delay: 0.68s;
+            transition-delay: 0.68s;
+    cursor: pointer;
+  }
+  body #navAnchor #navBar {
+    width: 90px;
+  }
+  body #navAnchor #navBar * {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  body #navAnchor #navBar .logo {
+    min-height: 125x;
+  }
+  body #navAnchor #navBar .logo img {
+    height: 45px;
+  }
+  body #navAnchor #navBar .menu li {
+    height: 65px;
+  }
+  body #navAnchor #navBar .menu li a i {
+    font-size: 25px;
+  }
+  body #navAnchor #navBar .menu li a span {
+    padding: 15px 7px;
+    min-width: unset;
+    max-width: 120px;
+    opacity: 1;
+    left: -140px;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+    font-size: 16px;
+  }
+  body #navAnchor #navBar .menu li a span::before {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -15px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #0C0C0C;
+  }
+  body #navAnchor #navBar .menu li a.active span {
+    color: #8DFFAA;
+  }
+  body #navAnchor #navBar .contSocial {
+    min-height: 125px;
+  }
+  body #navAnchor #navBar .contSocial i {
+    font-size: 25px;
+  }
+  body #navAnchor #navBar .contSocial .social {
+    padding: 15px 7px;
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+    left: -140px;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  body #navAnchor #navBar .contSocial .social::before {
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -15px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #0C0C0C;
+  }
+  body #navAnchor #navBar .contSocial .social li {
+    height: 50px;
+    width: 50px;
+  }
+  body #navAnchor #navBar .contSocial .social li i {
+    font-size: 24px;
+  }
+  body #navAnchor #navBar .separador {
+    width: 100%;
+    height: 2px;
+    background: #0F0F0F;
+  }
+  body #navAnchor.navbarShown #hamClose {
+    opacity: 1;
+  }
+  body #navAnchor.navbarShown #hamOpen {
+    opacity: 0;
+  }
+  body #navAnchor.navbarHidden {
+    left: -250px;
+  }
+  body #navAnchor.navbarHidden #hamClose {
+    opacity: 0;
+  }
+  body #navAnchor.navbarHidden #hamOpen {
+    opacity: 1;
+    right: -65px;
+  }
+  body #home #navbar {
     width: 100vw;
     height: 100%;
     padding: 40px 30px 20px;
@@ -4447,26 +3801,26 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #greet {
+  body #home #navbar #greet {
     width: 100%;
     padding: 0;
   }
-  body #navbar #greet #logo img {
+  body #home #navbar #greet #logo img {
     width: 100px;
   }
-  body #navbar #greet .hi {
+  body #home #navbar #greet .hi {
     font-weight: 400;
     font-size: 18px;
   }
-  body #navbar #greet .name {
+  body #home #navbar #greet .name {
     font-size: 25px;
     font-weight: 800;
   }
-  body #navbar #greet .ocupation {
+  body #home #navbar #greet .ocupation {
     font-size: 21px;
     font-weight: 500;
   }
-  body #navbar #downloadCV {
+  body #home #navbar #downloadCV {
     -ms-flex-item-align: start;
         align-self: flex-start;
     position: relative;
@@ -4475,30 +3829,30 @@ body .navbarHidden {
             box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
     padding: 12px 15px;
   }
-  body #navbar #downloadCV span {
+  body #home #navbar #downloadCV span {
     font-size: 15px;
     font-weight: 500;
     color: #8DFFAA;
   }
-  body #navbar #downloadCV i {
+  body #home #navbar #downloadCV i {
     background: none;
     position: absolute;
     padding: 0;
     right: 15px;
     opacity: 0;
   }
-  body #navbar #downloadCV:hover {
+  body #home #navbar #downloadCV:hover {
     background: #0F0F0F;
     padding-right: 50px;
   }
-  body #navbar #downloadCV:hover span {
+  body #home #navbar #downloadCV:hover span {
     color: #c8c8c8;
   }
-  body #navbar #downloadCV:hover i {
+  body #home #navbar #downloadCV:hover i {
     color: #c8c8c8;
     opacity: 1;
   }
-  body #navbar #menu {
+  body #home #navbar #menu {
     margin-top: 0;
     position: unset;
     -webkit-transform: none;
@@ -4521,7 +3875,7 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #menu li {
+  body #home #navbar #menu li {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 32%;
             flex: 0 1 32%;
@@ -4533,22 +3887,22 @@ body .navbarHidden {
             box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
     padding-top: 5px;
   }
-  body #navbar #menu li:first-child {
+  body #home #navbar #menu li:first-child {
     display: none;
   }
-  body #navbar #menu li:nth-child(2) a {
+  body #home #navbar #menu li:nth-child(2) a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 0;
   }
-  body #navbar #menu li:nth-child(4) a {
+  body #home #navbar #menu li:nth-child(4) a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 0;
   }
-  body #navbar #menu li a {
+  body #home #navbar #menu li a {
     width: 100%;
     height: 100%;
     font-size: 14px;
@@ -4570,26 +3924,26 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #menu li a::after {
+  body #home #navbar #menu li a::after {
     margin-top: 3px;
     content: " ";
     width: 10px;
     height: 2px;
     border-bottom: solid 1px #fafafa;
   }
-  body #navbar #menu li:hover {
+  body #home #navbar #menu li:hover {
     background: #0F0F0F;
     border: none;
   }
-  body #navbar #menu li:hover a {
+  body #home #navbar #menu li:hover a {
     color: #8DFFAA;
     font-size: 14px;
     border: none;
   }
-  body #navbar #menu li:hover a::after {
+  body #home #navbar #menu li:hover a::after {
     border-bottom: solid 2px #8DFFAA;
   }
-  body #navbar #social {
+  body #home #navbar #social {
     width: 151px;
     margin: 0;
     -ms-flex-item-align: center;
@@ -4610,7 +3964,7 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #social li {
+  body #home #navbar #social li {
     background: #1E1E1EDD;
     -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
             box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
@@ -4630,7 +3984,7 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #social li a {
+  body #home #navbar #social li a {
     height: 34px;
     width: 34px;
     display: -webkit-box;
@@ -4649,22 +4003,22 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #social li a img {
+  body #home #navbar #social li a img {
     width: 18px;
     max-height: 14px;
     opacity: 0.5;
     -webkit-filter: brightness(200%);
             filter: brightness(200%);
   }
-  body #navbar #social li a:hover {
+  body #home #navbar #social li a:hover {
     background: #0F0F0F;
   }
-  body #navbar #social li a:hover img {
+  body #home #navbar #social li a:hover img {
     opacity: 1;
     -webkit-filter: brightness(100%);
             filter: brightness(100%);
   }
-  body #navbar #language {
+  body #home #navbar #language {
     width: 65px;
     margin: 0;
     -ms-flex-item-align: center;
@@ -4685,7 +4039,7 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #language li a {
+  body #home #navbar #language li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4702,17 +4056,1309 @@ body .navbarHidden {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navbar #language li a span {
+  body #home #navbar #language li a span {
     color: #4b4b4b;
     padding: 3px 0;
   }
-  body #navbar #language li:hover a span {
+  body #home #navbar #language li:hover a span {
     color: #fafafa;
     border-bottom: solid 2px #8DFFAA;
   }
-  body #navbar #language li.used a span {
+  body #home #navbar #language li.used a span {
     color: #fafafa;
     border-bottom: solid 2px #8DFFAA;
+  }
+  body #about {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 60px 50px 50px 60px;
+    background: #1A1A1ABB;
+    overflow-y: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about section {
+    z-index: 0;
+    -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+  }
+  body #about .title {
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about .title h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  body #about .title .decoration {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about .title .decoration .line {
+    position: absolute;
+    background: #8DFFAA;
+    opacity: 0.5;
+    height: 1px;
+    width: 60px;
+  }
+  body #about .title .decoration .dot {
+    position: absolute;
+    background: #8DFFAA;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+  }
+  body #about #intro {
+    width: 100%;
+    max-width: 1280px;
+    background: #0C0C0C;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #intro .profile {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    height: 100%;
+    max-height: 200px;
+    border-radius: 100%;
+    margin-right: 40px;
+  }
+  body #about #intro .information {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-right: 40px;
+  }
+  body #about #intro .information .location {
+    margin: 6px 0;
+    padding: 6px 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #intro .information .location * {
+    color: #8DFFAA;
+  }
+  body #about #intro .information .location i {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  body #about #intro .information .description {
+    line-height: 1.6em;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+  }
+  body #about #intro .data {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    min-width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body #about #intro .data a {
+    margin-bottom: 12px;
+    padding-right: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #intro .data a:last-child {
+    margin: 0;
+  }
+  body #about #intro .data a i {
+    width: 35px;
+    height: 35px;
+    background: #232323;
+    color: #8DFFAA;
+    margin-right: 10px;
+    -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #intro .data a p {
+    font-size: 15px;
+    color: #8DFFAA;
+  }
+  body #about #intro .data a:hover * {
+    color: #c8c8c8;
+  }
+  body #about #intro .data a:hover i {
+    background: #0F0F0F;
+  }
+  body #about #intro .data #downloadCV {
+    position: relative;
+    background: #1E1E1EDD;
+    -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+    padding: 12px 15px;
+  }
+  body #about #intro .data #downloadCV span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #8DFFAA;
+  }
+  body #about #intro .data #downloadCV i {
+    background: none;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    padding: 0;
+    right: 15px;
+    opacity: 0;
+  }
+  body #about #intro .data #downloadCV:hover {
+    background: #0F0F0F;
+    padding-right: 50px;
+  }
+  body #about #intro .data #downloadCV:hover span {
+    color: #c8c8c8;
+  }
+  body #about #intro .data #downloadCV:hover i {
+    color: #c8c8c8;
+    opacity: 1;
+  }
+  body #about #skillsAndExpertise {
+    width: 100%;
+    max-width: 1280px;
+    margin-bottom: 40px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise .subtitle {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise .subtitle h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  body #about #skillsAndExpertise .subtitle .decoration {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise .subtitle .decoration .line {
+    position: absolute;
+    background: #8DFFAA;
+    opacity: 0.5;
+    height: 1px;
+    width: 50px;
+  }
+  body #about #skillsAndExpertise .subtitle .decoration .dot {
+    position: absolute;
+    background: #8DFFAA;
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+  }
+  body #about #skillsAndExpertise #skills {
+    height: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #skills .options {
+    width: 100%;
+    background: #0C0C0C;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #skills .options .icons {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-right: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #skills .options .icons i {
+    width: 45px;
+    height: 45px;
+    background: #232323;
+    color: #4b4b4b;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #skills .options .icons i:last-child {
+    margin: 0;
+  }
+  body #about #skillsAndExpertise #skills .options .icons i.active {
+    color: #8DFFAA;
+  }
+  body #about #skillsAndExpertise #skills .options .icons i:hover {
+    color: #8DFFAA;
+  }
+  body #about #skillsAndExpertise #skills .options .display {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    height: 100%;
+    padding: 15px 10px;
+  }
+  body #about #skillsAndExpertise #skills .options .display .content {
+    height: 100%;
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #skills .options .display .content p {
+    line-height: 1.6em;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #skills .options .display .content .software i {
+    font-size: 20px;
+    color: #707070;
+    padding: 0 5px;
+  }
+  body #about #skillsAndExpertise #skills .options .display .content h1 {
+    color: #8DFFAA;
+    font-size: 26px;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ui #uiContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ui #uxContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ui #webContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ui #researchContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ux #uiContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ux #uxContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ux #webContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.ux #researchContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.web #uiContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.web #uxContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.web #webContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #skills .options .display.web #researchContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.research #uiContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.research #uxContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.research #webContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #skills .options .display.research #researchContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #expertise {
+    height: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #expertise .options {
+    width: 100%;
+    background: #0C0C0C;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #expertise .options .icons {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-left: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #expertise .options .icons i {
+    width: 45px;
+    height: 45px;
+    background: #232323;
+    color: #4b4b4b;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #expertise .options .icons i:last-child {
+    margin: 0;
+  }
+  body #about #skillsAndExpertise #expertise .options .icons i.active {
+    color: #8DFFAA;
+  }
+  body #about #skillsAndExpertise #expertise .options .icons i:hover {
+    color: #8DFFAA;
+  }
+  body #about #skillsAndExpertise #expertise .options .display {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    height: 100%;
+    padding: 15px 10px;
+  }
+  body #about #skillsAndExpertise #expertise .options .display .content {
+    height: 100%;
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #expertise .options .display .content p {
+    line-height: 1.6em;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #skillsAndExpertise #expertise .options .display .content .software i {
+    font-size: 20px;
+    color: #707070;
+    padding: 0 5px;
+  }
+  body #about #skillsAndExpertise #expertise .options .display .content h1 {
+    color: #8DFFAA;
+    font-size: 26px;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.leader #leaderContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.leader #teamContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.leader #analyticContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.leader #businessContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.team #leaderContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.team #teamContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.team #analyticContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.team #businessContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.analytic #leaderContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.analytic #teamContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.analytic #analyticContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.analytic #businessContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.business #leaderContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.business #teamContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.business #analyticContent {
+    display: none;
+  }
+  body #about #skillsAndExpertise #expertise .options .display.business #businessContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #about #featuredWork {
+    width: 100%;
+    max-width: 1280px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork .project {
+    width: 100%;
+    background: #0C0C0C;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 2px 10px -3px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main {
+    height: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-right: 20px;
+  }
+  body #about #featuredWork #main .bg {
+    width: 100%;
+  }
+  body #about #featuredWork #main .type {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #232323;
+    font-weight: 500;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main .type i {
+    color: #232323;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main .year {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 35px;
+    padding: 0 10px;
+    font-weight: 600;
+    color: #232323;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main .name {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-family: 'Mitr', sans-serif;
+    color: #fafafa;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 0.9em;
+    z-index: 0;
+  }
+  body #about #featuredWork #main .prev {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    z-index: 0;
+  }
+  body #about #featuredWork #main .overlay {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    opacity: 0;
+    background: radial-gradient(#0F0F0F, #232323);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main .overlay i {
+    font-size: 17px;
+    margin-right: 15px;
+    color: #c8c8c8;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  body #about #featuredWork #main .overlay span {
+    font-size: 16px;
+    color: #c8c8c8;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  body #about #featuredWork #main .links {
+    position: absolute;
+    top: 65%;
+    z-index: -1;
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main .links a {
+    margin-right: 15px;
+  }
+  body #about #featuredWork #main .links a i {
+    color: #c8c8c8;
+    background: #232323;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #main .links a:last-child {
+    margin: 0;
+  }
+  body #about #featuredWork #main .links a:hover i {
+    color: #8DFFAA;
+    background: #0F0F0F;
+  }
+  body #about #featuredWork #main:hover .type {
+    z-index: 99;
+    color: #c8c8c8;
+  }
+  body #about #featuredWork #main:hover .type i {
+    color: #c8c8c8;
+  }
+  body #about #featuredWork #main:hover .year {
+    z-index: 99;
+    color: #c8c8c8;
+  }
+  body #about #featuredWork #main:hover .prev {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+  }
+  body #about #featuredWork #main:hover .overlay {
+    z-index: 98;
+    opacity: 0.9;
+  }
+  body #about #featuredWork #main:hover .links {
+    z-index: 99;
+    opacity: 1;
+  }
+  body #about #featuredWork #secundary {
+    height: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .bg {
+    width: 100%;
+    height: 100%;
+  }
+  body #about #featuredWork #secundary .project .type {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #232323;
+    font-weight: 500;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .type i {
+    color: #232323;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .year {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 35px;
+    padding: 0 10px;
+    font-weight: 600;
+    color: #232323;
+    z-index: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .name {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    font-size: 32px;
+    line-height: 0.9em;
+    font-weight: 600;
+    z-index: 0;
+    color: #232323;
+  }
+  body #about #featuredWork #secundary .project .prev {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    right: 10%;
+    z-index: 0;
+  }
+  body #about #featuredWork #secundary .project .overlay {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    z-index: -1;
+    opacity: 0;
+    background: radial-gradient(#0F0F0F, #232323);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .overlay i {
+    font-size: 17px;
+    margin-right: 15px;
+    color: #c8c8c8;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  body #about #featuredWork #secundary .project .overlay span {
+    font-size: 16px;
+    color: #c8c8c8;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  body #about #featuredWork #secundary .project .links {
+    position: absolute;
+    top: 65%;
+    z-index: -1;
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .links a {
+    margin-right: 15px;
+  }
+  body #about #featuredWork #secundary .project .links a i {
+    color: #c8c8c8;
+    background: #232323;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #about #featuredWork #secundary .project .links a:last-child {
+    margin: 0;
+  }
+  body #about #featuredWork #secundary .project .links a:hover i {
+    color: #8DFFAA;
+    background: #0F0F0F;
+  }
+  body #about #featuredWork #secundary .project:hover .type {
+    z-index: 99;
+    color: #c8c8c8;
+  }
+  body #about #featuredWork #secundary .project:hover .type i {
+    color: #c8c8c8;
+  }
+  body #about #featuredWork #secundary .project:hover .year {
+    z-index: 99;
+    color: #c8c8c8;
+  }
+  body #about #featuredWork #secundary .project:hover .prev {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+  }
+  body #about #featuredWork #secundary .project:hover .overlay {
+    z-index: 98;
+    opacity: 0.9;
+  }
+  body #about #featuredWork #secundary .project:hover .links {
+    z-index: 99;
+    opacity: 1;
+  }
+  body #about #featuredWork #secundary #projectTwo {
+    height: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-bottom: 20px;
+  }
+  body #about #featuredWork #secundary #projectThree {
+    height: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
