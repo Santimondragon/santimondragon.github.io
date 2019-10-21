@@ -101,6 +101,26 @@ hamClose.addEventListener("click", () => {
     navbar.className = "navbarHidden";
 });
 
+const dots = document.querySelector("#dots");
+const counterValue = document.querySelector("#counterValue");
+let counter = 4;
+
+setInterval(() => {
+    dots.innerHTML += " .";
+    if(dots.innerHTML === ". . . ."){
+        dots.innerHTML = ".";
+    }
+}, 500);
+
+setInterval(() => {
+    counterValue.innerHTML = counter;
+    counter -= 1;
+
+    if(counter < 0){
+        window.location.replace("http://www.santimondragon.com");
+    }
+}, 1000);
+
 (function () {
     function id(v) {
         return document.getElementById(v);
